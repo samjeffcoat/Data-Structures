@@ -16,7 +16,15 @@ class Queue:
        self.storage.add_to_tail(value)
 
     def dequeue(self):
-        pass
+        """
+        we are reducing the que here
+        """
+        if self.size > 0:
+          self.size -= 1
+          head_item = self.storage.head_item
+          self.storage.remove_from_head()
+          return head_item.value 
 
     def len(self):
-        pass
+        """defining the length of our que"""
+        
