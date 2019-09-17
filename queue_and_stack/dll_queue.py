@@ -1,6 +1,5 @@
+
 from doubly_linked_list import DoublyLinkedList
-import sys
-sys.path.append('/doubly_linked_list')
 
 
 class Queue:
@@ -21,9 +20,7 @@ class Queue:
         """
         if self.size > 0:
             self.size -= 1
-            head_item = self.storage.head_item
-            self.storage.remove_from_head()
-            return head_item.value
+            return self.storage.remove_from_head()
         else:
             return None
 
